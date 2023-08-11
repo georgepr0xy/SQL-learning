@@ -80,7 +80,10 @@ alter table exam rename to examination;
 
 alter table examination rename to georgeproxy;
 
+select * from georgeproxy;
 
+insert into georgeproxy(id , name , sub_code) values
+(10,"prajjwal",23);
 
 
  
