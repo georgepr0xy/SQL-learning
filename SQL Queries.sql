@@ -78,6 +78,7 @@ alter table exam change column marks grade int ;
 alter table exam drop column grade;
 alter table exam rename to examination;
 
+alter table examination rename to georgeproxy;
 
 
 
