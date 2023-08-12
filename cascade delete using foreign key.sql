@@ -6,14 +6,26 @@ gender char(2),
 pincode int
 );
 
-
+-- cacade is used-->
+ 
 create table c_order (
-order_id int primary key,
+order_id int,
 ordername varchar(256),
 address varchar(256),
 foreign key(order_id) 
 references customer(id)
 on delete cascade
+);
+
+-- null is used on delete--->
+
+create table c_order (
+order_id int,
+ordername varchar(256),
+address varchar(256),
+foreign key(order_id) 
+references customer(id)
+on delete set null
 );
 
 insert into customer values
@@ -29,11 +41,11 @@ select * from customer;
 
 insert into c_order values
 (9,'mouse','allapur'),
-(10,'keyboard','allapur'),
 (11,'table','allapur'),
 (12,'chair','allapur'),
 (13,'pen','allapur');
 
 select * from c_order;
 
-delete from customer where id = 10;
+delete from customer where id = 13;
+drop table c_order;
