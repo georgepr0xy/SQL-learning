@@ -34,3 +34,17 @@ update customer set pincode = pincode + 1;
 
 delete from customer where id = 10;
 delete from customer;
+
+-- replace and update --->
+
+replace into customer(id , cname) values
+(45,'dp singh');
+replace into customer(id , cname) values
+(45,'singh dp');
+
+replace into customer set id ='12' , cname ='Seth', pincode='211008';
+use temp;
+replace into customer (id,cname,gender)
+select id,cname,gender
+from customer where id =11;
+  
