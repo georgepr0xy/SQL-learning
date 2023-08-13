@@ -73,6 +73,8 @@ inner join project as p on e.id = p.empid;
 select * from employee as e
 inner join project as p on e.id = p.empid;
 
+-- fetch all the emp id and contact detail who is working from jaipur with client name who working fromm hyderbad
+
 select e.id , e.emailid, e.phoneNo, c.first_name, c.last_name from employee as e
 inner join client as c  on e.id = c.empid where e.city ='jaipur' and c.city='hyderabd';
 
