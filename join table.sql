@@ -79,5 +79,22 @@ select e.id , e.emailid, e.phoneNo, c.first_name, c.last_name from employee as e
 inner join client as c  on e.id = c.empid where e.city ='jaipur' and c.city='hyderabad';
 
 
+-- fecth out each project allocated to each employee
+-- left join 
 
+select e.fname , e.lname, p.name from employee as e 
+left join
+project as p on e.id = p.empid;
 
+-- list out all the project along with employee name and email id 
+-- right join 
+
+select p.id, p.name, e.fname, e.emailid from employee as e
+right join 
+project as p on e.id = p.empid;
+
+-- cross join 
+-- list out all the combination of employee name and project combination 
+
+select e.fname, e.lname, p.id,p.name from employee as e
+cross join project as p;
