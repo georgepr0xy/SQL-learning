@@ -38,6 +38,7 @@ insert into customer values
 (15,'mayank tripathi','daraganj','M', 211003);
 
 select * from customer;
+select cname from customer where cname not like '%e';
 
 insert into c_order values
 (9,'mouse','allapur'),
