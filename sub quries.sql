@@ -102,7 +102,14 @@ select * from employee where id in
  
  -- -------------------------------------------------------------------------------------->
  
- 
+-- co related query
+-- find third oldest employee
+
+select * from employee as e1 where 3=
+(select count(e2.age)
+from employee as e2
+where e2.age >= e1.age
+);
 
 
 
